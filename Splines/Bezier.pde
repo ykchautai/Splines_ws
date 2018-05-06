@@ -18,7 +18,7 @@ class Bezier{
     ArrayList<ArrayList<Vector>> puntos = new ArrayList<ArrayList<Vector>>();
     if(grade == 3){
         ArrayList<Vector> a = new ArrayList<Vector>();
-        for(int i = 0; i < 4; i++){
+        for(int i = 0; i < 3; i++){
           a.add(controlPoints.get(i));
         }
         ArrayList<Vector> b = new ArrayList<Vector>();
