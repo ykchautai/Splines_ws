@@ -22,8 +22,10 @@ Complete la tabla:
 
 | Integrante | github nick |
 |------------|-------------|
-|            |             |
+| Yessica Chautá Insuasty | ykchautai |
+| Andrés Sánchez Lemus | andfsanchezlem |
+| Kevin Mendez Páez | kmendezp96 |
 
 ## Entrega
 
-* Modo de entrega: Haga [fork](https://help.github.com/articles/fork-a-repo/) de la plantilla e informe la url del repo en la hoja *urls* de la plantilla compartida (una sola vez por grupo). Plazo: 29/4/18 a las 24h.
+* Modo de entrega: Haga [fork](https://help.github.com/articles/fork-a-repo/) de la plantilla e informe la url del repo en la hoja *urls* de la plantilla compartida (una sola vez por grupo). Plazo: 6/5/18 a las 24h.

@@ -66,11 +66,37 @@ void draw() {
     stroke(255, 0, 255);
     scene.drawPath(interpolator);
   }
+ 
   // implement me
   // draw curve according to control polygon an mode
   // To retrieve the positions of the control points do:
   // for(Frame frame : interpolator.keyFrames())
   //   frame.position();
+  ArrayList<Vector> nPoints = new ArrayList<Vector>();
+  for(Frame frame : interpolator.keyFrames()) {
+    nPoints.add(frame.position());
+  }
+  
+  //cdraw(nPoints);
+
+  switch(mode){
+  case 0:
+    Natural natural = new Natural(8, nPoints);
+    cdraw(natural.printPoints);
+  break;
+  case 1:
+    Hermite hermite = new Hermite(8, nPoints);
+    cdraw(hermite.printPoints);
+  break;
+  case 2:
+    Bezier bezierThree = new Bezier(8, 3, nPoints);
+    cdraw(bezierThree.printPoints);
+  break;
+  case 3:
+    Bezier bezierSeven = new Bezier(8, 7, nPoints);
+    cdraw(bezierSeven.printPoints);
+  break;
+  }
 }
 
 void keyPressed() {
@@ -80,4 +106,14 @@ void keyPressed() {
     drawGrid = !drawGrid;
   if (key == 'c')
     drawCtrl = !drawCtrl;
+}
+
+void cdraw(ArrayList<Vector> points){
+  strokeWeight(1);
+  stroke(50,100,150);
+  for(int i = 0; i < points.size()-1; i ++){
+      Vector Pi = points.get(i);
+      Vector Pj = points.get(i+1);
+      line(Pi.x(),Pi.y(),Pi.z(),Pj.x(), Pj.y(),Pj.z());
+  }
 }
