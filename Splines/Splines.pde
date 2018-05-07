@@ -89,12 +89,12 @@ void draw() {
     cdraw(hermite.printPoints);
   break;
   case 2:
-    Bezier bezierThree = new Bezier(8, 3, nPoints);
-    cdraw(bezierThree.printPoints);
-  break;
-  case 3:
     Bezier bezierSeven = new Bezier(8, 7, nPoints);
     cdraw(bezierSeven.printPoints);
+  break;
+  case 3:
+    Bezier bezierThree = new Bezier(8, 3, nPoints);
+    cdraw(bezierThree.printPoints);
   break;
   }
 }
